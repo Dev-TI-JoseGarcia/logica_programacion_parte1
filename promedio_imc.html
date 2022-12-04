@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA</h1>
+<script>
+
+function saltarlinea()
+{
+
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<hr>");
+    document.write("<br>");
+
+    document.write("<br>");
+}
+
+
+function imprimir(frase)
+{
+
+document.write("<big>"+frase+"</big>");
+saltarlinea();
+
+}
+
+cont=0;
+function imc(peso, altura,persona)
+{
+var resultado=0;
+var medida=(altura/100);
+resultado=(peso/(medida*medida));
+
+
+imprimir("Calculo de IMC de "+persona+" es: "+resultado.toFixed(2));
+guarda(cont,resultado);
+cont++;
+pro();
+}
+
+var lista=new Array(2);
+function guarda(n,p)
+{
+lista[n]=p;
+}
+
+function pro()
+{
+    if(cont==2)
+    {
+  var r=(lista[0]+lista[1]) /2;
+  imprimir("Promedio de IMC es: "+r.toFixed(2));
+    }
+}
+
+imc(75,172,"Cristian");
+imc(75,123,"Felipe");
+
+
+</script>
+

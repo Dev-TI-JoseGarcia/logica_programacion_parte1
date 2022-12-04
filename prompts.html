@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA</h1>
+<script>
+
+function saltarlinea()
+{
+
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<hr>");
+    document.write("<br>");
+
+    document.write("<br>");
+}
+
+
+function imprimir(frase)
+{
+
+document.write("<big>"+frase+"</big>");
+saltarlinea();
+
+}
+
+cont=0;
+function imc(peso, altura,persona)
+{
+var resultado=0;
+var medida=(altura/100);
+resultado=(peso/(medida*medida));
+
+
+imprimir("Calculo de IMC de "+persona+" es: "+resultado.toFixed(2));
+
+}
+
+
+var dato=prompt("Ingresar tu nombre:");
+var dato1=prompt("Ingresar peso:");
+var dato2=prompt("Ingresar tu altura "+dato);
+
+imc(dato1,dato2,dato);
+
+</script>
+
